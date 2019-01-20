@@ -36,14 +36,14 @@ type CakeMaker2() =
         member __.ChocolatePrice = 23.0
 
 module CakeOptions =
-    let createWithCreamOnly (maker:IHavingCreamPrice) =
+    let createWithCreamOnly (maker : IHavingCreamPrice) =
         { Cream = Some maker.CreamPrice
           Jam = None
           Chocolate = None
             // ... and 36 more members ...
         }
 
-    let createFull (maker:IHavingCreamJamChocolatePrices) =
+    let createFull (maker : IHavingCreamJamChocolatePrices) =
         { Cream = Some maker.CreamPrice
           Jam = Some maker.JamPrice
           Chocolate = Some maker.ChocolatePrice
